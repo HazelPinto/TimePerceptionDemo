@@ -1,0 +1,96 @@
+2.2823 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+8.3394 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [2560, 1440]. Using actual size
+10.9084 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000169878223A0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000169897086A0>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([2560, 1440]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.9087 	EXP 	window1: mouseVisible = True
+10.9090 	EXP 	window1: mouseVisible = False
+10.9091 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+10.9092 	EXP 	window1: recordFrameIntervals = False
+11.0736 	EXP 	window1: recordFrameIntervals = True
+11.2573 	EXP 	Screen (0) actual frame rate measured at 59.91Hz
+11.2575 	EXP 	window1: recordFrameIntervals = False
+12.9956 	EXP 	Created text_instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Comic Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_instr', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.0070 	EXP 	Created image_next = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='next.png', interpolate=True, mask=None, maskParams=None, name='image_next', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), size=array([0.11319444, 0.06736111]), texRes=128.0, units='height', win=Window(...))
+13.0073 	EXP 	window1: mouseVisible = True
+13.0205 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0.0, pos=array([0. , 0.3]), rgb=UNKNOWN, text='The amount of seconds you have to estimate is ', units='height', win=Window(...), wrapWidth=1)
+13.0211 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.0283 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.1339 	EXP 	Sound sound_1 set volume 1.000
+13.1355 	EXP 	Created text_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_5', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.1696 	EXP 	text_instr: autoDraw = True
+13.1696 	EXP 	image_next: autoDraw = True
+14.4561 	DATA 	Mouse: Left button down, pos=(2126,155)
+14.4658 	EXP 	Imported C:/Users/carelab/Desktop/Erik/resources/Lsquare.csv as conditions, 16 conditions, 26 params
+14.4662 	EXP 	Created sequence: sequential, trialTypes=16, nReps=1, seed=None
+14.4668 	EXP 	New trial (rep=0, index=0): OrderedDict([('Participant1', 30), ('Participant2', 30), ('Participant3', 105), ('Participant4', 105), ('Participant5', 60), ('Participant6', 120), ('Participant7', 120), ('Participant8', 120), ('Participant9', 105), ('Participant10', 60), ('Participant11', 105), ('Participant12', 60), ('Participant13', 30), ('Participant14', 60), ('Participant15', 120), ('Participant16', 30), ('Participant17', 30), ('Participant18', 30), ('Participant19', 105), ('Participant20', 105), ('Participant21', 60), ('Participant22', 120), ('Participant23', 120), ('Participant24', 120), ('Participant25', 105), ('Participant26', 60)])
+14.4792 	EXP 	text_instr: autoDraw = False
+14.4792 	EXP 	image_next: autoDraw = False
+14.4792 	EXP 	text_2: height = 0.05
+14.4792 	EXP 	text_2: height = 0.05
+14.4792 	EXP 	text_2: height = 0.05
+14.4792 	EXP 	text_2: text = 30
+14.4792 	EXP 	text_3: autoDraw = True
+14.4792 	EXP 	text_2: autoDraw = True
+14.4792 	EXP 	text_4: autoDraw = True
+14.5411 	DATA 	Mouse:  Left button up, pos=(2125,155)
+15.4312 	DATA 	Keypress: space
+15.4360 	EXP 	text_3: autoDraw = False
+15.4360 	EXP 	text_2: autoDraw = False
+15.4360 	EXP 	text_4: autoDraw = False
+15.4360 	EXP 	text_5: autoDraw = True
+24.1236 	EXP 	New trial (rep=0, index=1): OrderedDict([('Participant1', 30), ('Participant2', 105), ('Participant3', 105), ('Participant4', 60), ('Participant5', 120), ('Participant6', 120), ('Participant7', 120), ('Participant8', 105), ('Participant9', 60), ('Participant10', 105), ('Participant11', 60), ('Participant12', 30), ('Participant13', 60), ('Participant14', 120), ('Participant15', 30), ('Participant16', 30), ('Participant17', 30), ('Participant18', 105), ('Participant19', 105), ('Participant20', 60), ('Participant21', 120), ('Participant22', 120), ('Participant23', 120), ('Participant24', 105), ('Participant25', 60), ('Participant26', 105)])
+24.1270 	DATA 	Keypress: space
+24.1360 	EXP 	text_5: autoDraw = False
+24.1360 	EXP 	text_2: height = 0.05
+24.1360 	EXP 	text_2: height = 0.05
+24.1360 	EXP 	text_2: height = 0.05
+24.1360 	EXP 	text_2: text = 30
+24.1360 	EXP 	text_3: autoDraw = True
+24.1360 	EXP 	text_2: autoDraw = True
+24.1360 	EXP 	text_4: autoDraw = True
+24.9592 	DATA 	Keypress: space
+24.9643 	EXP 	text_3: autoDraw = False
+24.9643 	EXP 	text_2: autoDraw = False
+24.9643 	EXP 	text_4: autoDraw = False
+24.9643 	EXP 	text_5: autoDraw = True
+30.0707 	EXP 	New trial (rep=0, index=2): OrderedDict([('Participant1', 30), ('Participant2', 30), ('Participant3', 30), ('Participant4', 105), ('Participant5', 105), ('Participant6', 60), ('Participant7', 120), ('Participant8', 120), ('Participant9', 120), ('Participant10', 105), ('Participant11', 60), ('Participant12', 105), ('Participant13', 60), ('Participant14', 30), ('Participant15', 60), ('Participant16', 120), ('Participant17', 30), ('Participant18', 30), ('Participant19', 30), ('Participant20', 105), ('Participant21', 105), ('Participant22', 60), ('Participant23', 120), ('Participant24', 120), ('Participant25', 120), ('Participant26', 105)])
+30.0743 	DATA 	Keypress: space
+30.0842 	EXP 	text_5: autoDraw = False
+30.0842 	EXP 	text_2: height = 0.05
+30.0842 	EXP 	text_2: height = 0.05
+30.0842 	EXP 	text_2: height = 0.05
+30.0842 	EXP 	text_2: text = 30
+30.0842 	EXP 	text_3: autoDraw = True
+30.0842 	EXP 	text_2: autoDraw = True
+30.0842 	EXP 	text_4: autoDraw = True
+36.8394 	DATA 	Keypress: space
+36.8444 	EXP 	text_3: autoDraw = False
+36.8444 	EXP 	text_2: autoDraw = False
+36.8444 	EXP 	text_4: autoDraw = False
+36.8444 	EXP 	text_5: autoDraw = True
+37.9531 	EXP 	New trial (rep=0, index=3): OrderedDict([('Participant1', 105), ('Participant2', 105), ('Participant3', 60), ('Participant4', 120), ('Participant5', 120), ('Participant6', 120), ('Participant7', 105), ('Participant8', 60), ('Participant9', 105), ('Participant10', 60), ('Participant11', 30), ('Participant12', 60), ('Participant13', 120), ('Participant14', 30), ('Participant15', 30), ('Participant16', 30), ('Participant17', 105), ('Participant18', 105), ('Participant19', 60), ('Participant20', 120), ('Participant21', 120), ('Participant22', 120), ('Participant23', 105), ('Participant24', 60), ('Participant25', 105), ('Participant26', 60)])
+37.9589 	DATA 	Keypress: space
+37.9651 	EXP 	text_5: autoDraw = False
+37.9651 	EXP 	text_2: height = 0.05
+37.9651 	EXP 	text_2: height = 0.05
+37.9651 	EXP 	text_2: height = 0.05
+37.9651 	EXP 	text_2: text = 105
+37.9651 	EXP 	text_3: autoDraw = True
+37.9651 	EXP 	text_2: autoDraw = True
+37.9651 	EXP 	text_4: autoDraw = True
+38.9735 	DATA 	Keypress: space
+38.9776 	EXP 	text_3: autoDraw = False
+38.9776 	EXP 	text_2: autoDraw = False
+38.9776 	EXP 	text_4: autoDraw = False
+38.9776 	EXP 	text_5: autoDraw = True
+39.8847 	EXP 	New trial (rep=0, index=4): OrderedDict([('Participant1', 120), ('Participant2', 30), ('Participant3', 30), ('Participant4', 30), ('Participant5', 105), ('Participant6', 105), ('Participant7', 60), ('Participant8', 120), ('Participant9', 120), ('Participant10', 120), ('Participant11', 105), ('Participant12', 60), ('Participant13', 105), ('Participant14', 60), ('Participant15', 30), ('Participant16', 60), ('Participant17', 120), ('Participant18', 30), ('Participant19', 30), ('Participant20', 30), ('Participant21', 105), ('Participant22', 105), ('Participant23', 60), ('Participant24', 120), ('Participant25', 120), ('Participant26', 120)])
+39.8893 	DATA 	Keypress: space
+39.8978 	EXP 	text_5: autoDraw = False
+39.8978 	EXP 	text_2: height = 0.05
+39.8978 	EXP 	text_2: height = 0.05
+39.8978 	EXP 	text_2: height = 0.05
+39.8978 	EXP 	text_2: text = 120
+39.8978 	EXP 	text_3: autoDraw = True
+39.8978 	EXP 	text_2: autoDraw = True
+39.8978 	EXP 	text_4: autoDraw = True
+40.6665 	DATA 	Keypress: escape
+42.7489 	EXP 	window1: mouseVisible = True
