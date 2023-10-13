@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on October 06, 2023, at 13:22
+    on October 12, 2023, at 15:58
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -182,8 +182,11 @@ text_6 = visual.TextStim(win=win, name='text_6',
     languageStyle='LTR',
     depth=-7.0);
 # Run 'Begin Experiment' code from code_2
-myClock = core.Clock()
-sound_1 = sound.Sound('C:/Users/carelab/Desktop/Erik/stimuli/a2.wav', secs=-1, stereo=True, hamming=True,
+import os 
+my_path="C:/Users/carelab/Desktop/Erik/stimuli"
+arr=os.listdir(my_path)
+
+sound_1 = sound.Sound(f"C:/Users/carelab/Desktop/Erik/stimuli/{arr[1]}", secs=-1, stereo=True, hamming=True,
     name='sound_1')
 sound_1.setVolume(1.0)
 
@@ -527,7 +530,7 @@ for thisTrial in trials:
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    distractor = data.TrialHandler(nReps=13.0, method='random', 
+    distractor = data.TrialHandler(nReps=20.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('C:/Users/carelab/Desktop/Erik/resources/stroop.xlsx'),
         seed=None, name='distractor')
@@ -607,11 +610,6 @@ for thisTrial in trials:
                 if len(_key_resp_2_allKeys):
                     key_resp_2.keys = _key_resp_2_allKeys[-1].name  # just the last key pressed
                     key_resp_2.rt = _key_resp_2_allKeys[-1].rt
-                    # was this correct?
-                    if (key_resp_2.keys == str('')) or (key_resp_2.keys == ''):
-                        key_resp_2.corr = 1
-                    else:
-                        key_resp_2.corr = 0
                     # a response ends the routine
                     continueRoutine = False
             
@@ -820,14 +818,7 @@ for thisTrial in trials:
         # check responses
         if key_resp_2.keys in ['', [], None]:  # No response was made
             key_resp_2.keys = None
-            # was no response the correct answer?!
-            if str('').lower() == 'none':
-               key_resp_2.corr = 1;  # correct non-response
-            else:
-               key_resp_2.corr = 0;  # failed to respond (incorrectly)
-        # store data for distractor (TrialHandler)
         distractor.addData('key_resp_2.keys',key_resp_2.keys)
-        distractor.addData('key_resp_2.corr', key_resp_2.corr)
         if key_resp_2.keys != None:  # we had a response
             distractor.addData('key_resp_2.rt', key_resp_2.rt)
         # check responses
@@ -841,7 +832,7 @@ for thisTrial in trials:
                 distractor.finished=1
         # the Routine "t_2" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
-    # completed 13.0 repeats of 'distractor'
+    # completed 20.0 repeats of 'distractor'
     
     
     # --- Prepare to start Routine "end_sound" ---
@@ -850,8 +841,8 @@ for thisTrial in trials:
     # update component parameters for each repeat
     # Run 'Begin Routine' code from code_3
     sound_1.stop()
-    myClock.reset()
-    sound_1 = sound.Sound('C:/Users/carelab/Desktop/Erik/stimuli/a2.wav', secs=-1, stereo=True, hamming=True,
+    random_song = random.choice(arr)
+    sound_1 = sound.Sound(f'C:/Users/carelab/Desktop/Erik/stimuli/{random_song}', secs=-1, stereo=True, hamming=True,
         name='sound_1')
     sound_1.setVolume(1.0)
     # keep track of which components have finished
