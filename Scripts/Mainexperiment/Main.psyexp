@@ -92,8 +92,8 @@
     </Routine>
     <Routine name="Instructions">
       <CodeComponent name="Port_set">
-        <Param val="&amp;#10;import numpy as np&amp;#10;import serial&amp;#10;import os&amp;#10;from datetime import datetime&amp;#10;# open serial port&amp;#10;# revise the port here&amp;#10;# port = serial.Serial('/dev/cu.usbserial-2120', 115200)&amp;#10;port = serial.Serial('COM3', 115200)&amp;#10;# port: the variable defined abolve&amp;#10;# desc: the description of the event&amp;#10;def event(port, desc, timestamp):&amp;#10;#    win.callOnFlip(port.write, str.encode('1'))&amp;#10;    thisExp.addData(desc, timestamp)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="import * as np from 'numpy';&amp;#10;import * as serial from 'serial';&amp;#10;import * as os from 'os';&amp;#10;import {datetime} from 'datetime';&amp;#10;var port;&amp;#10;port = new serial.Serial(&quot;COM3&quot;, 115200);&amp;#10;function event(port, desc, timestamp) {&amp;#10;    psychoJS.experiment.addData(desc, timestamp);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="&amp;#10;import numpy as np&amp;#10;import serial&amp;#10;import os&amp;#10;from datetime import datetime&amp;#10;# open serial port&amp;#10;# revise the port here&amp;#10;# port = serial.Serial('/dev/cu.usbserial-2120', 115200)&amp;#10;portecg = serial.Serial('COM3', 115200)&amp;#10;# port: the variable defined abolve&amp;#10;# desc: the description of the event&amp;#10;def event(port, desc, timestamp):&amp;#10;#    win.callOnFlip(port.write, str.encode('1'))&amp;#10;    thisExp.addData(desc, timestamp)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="import * as np from 'numpy';&amp;#10;import * as serial from 'serial';&amp;#10;import * as os from 'os';&amp;#10;import {datetime} from 'datetime';&amp;#10;var portecg;&amp;#10;portecg = new serial.Serial(&quot;COM3&quot;, 115200);&amp;#10;function event(port, desc, timestamp) {&amp;#10;    psychoJS.experiment.addData(desc, timestamp);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
@@ -101,11 +101,11 @@
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="port.close()&amp;#10;" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="portecg.close()&amp;#10;" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="portecg.close();&amp;#10;" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="Port_set" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <KeyboardComponent name="key_resp_4">
@@ -319,27 +319,44 @@
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="port.close()&amp;#10;" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="port.write(str.encode(&quot;1&quot;));&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="port.write(str.encode(&quot;1&quot;))" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="portecg.write(str.encode(&quot;1&quot;));&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="portecg.write(str.encode(&quot;1&quot;))" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="Trigger_triggering" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <CodeComponent name="code">
+      <CodeComponent name="triggeringeeg">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="lh.writeValue(3);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="lh.writeValue(3)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="lh.writeValue(2);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="lh.writeValue(2)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="lh.writeValue(4);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="lh.writeValue(4)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="lh.writeValue(8);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="lh.writeValue(8)" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code" valType="code" updates="None" name="name"/>
+        <Param val="triggeringeeg" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="music_starrt">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="import * as os from 'os';&amp;#10;var arr, my_path, random_song, sound_1;&amp;#10;my_path = &quot;C:/Users/carelab/Desktop/Erik/stimuli/sbject&quot;;&amp;#10;arr = os.listdir(my_path);&amp;#10;random_song = random.choice(arr);&amp;#10;sound_1 = new sound.Sound(`C:/Users/carelab/Desktop/Erik/stimuli/sbject/${random_song}`, {&quot;secs&quot;: (- 1), &quot;stereo&quot;: true, &quot;hamming&quot;: true, &quot;name&quot;: &quot;sound_1&quot;});&amp;#10;if ((cond === 0.1)) {&amp;#10;    sound_1.setVolume(1.0);&amp;#10;}&amp;#10;if ((cond === 0.1)) {&amp;#10;    if ((sound_1.status === NOT_STARTED)) {&amp;#10;        sound_1.play({&quot;when&quot;: psychoJS.window});&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="&amp;#10;import os &amp;#10;&amp;#10;my_path=&quot;C:/Users/carelab/Desktop/Erik/stimuli/sbject&quot;&amp;#10;arr=os.listdir(my_path)&amp;#10;random_song = random.choice(arr)&amp;#10;sound_1 = sound.Sound(f'C:/Users/carelab/Desktop/Erik/stimuli/sbject/{random_song}', secs=-1, stereo=True, hamming=True,&amp;#10;    name='sound_1')&amp;#10;&amp;#10;&amp;#10;if cond==0.1:&amp;#10;    &amp;#10;    sound_1.setVolume(1.0)&amp;#10;&amp;#10;if cond==0.1:&amp;#10;    if sound_1.status == NOT_STARTED:&amp;#10;        &amp;#10;        sound_1.play(when=win)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="music_starrt" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
     <Routine name="Estimation"/>
@@ -389,7 +406,7 @@
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="cond" valType="num" updates="set every repeat" name="letterHeight"/>
         <Param val="text_5" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
@@ -414,7 +431,7 @@
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="cond" valType="num" updates="set every repeat" name="letterHeight"/>
         <Param val="stopb" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
@@ -439,7 +456,7 @@
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="cond" valType="num" updates="set every repeat" name="letterHeight"/>
         <Param val="stopl" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="90" valType="num" updates="constant" name="ori"/>
@@ -464,7 +481,7 @@
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="cond" valType="num" updates="set every repeat" name="letterHeight"/>
         <Param val="stopr" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="-90" valType="num" updates="constant" name="ori"/>
@@ -522,23 +539,6 @@
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="Music_start">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="import os &amp;#10;my_path=&quot;C:/Users/carelab/Desktop/Erik/stimuli&quot;&amp;#10;arr=os.listdir(my_path)&amp;#10;&amp;#10;sound_1 = sound.Sound(f&quot;C:/Users/carelab/Desktop/Erik/stimuli/{arr[1]}&quot;, secs=-1, stereo=True, hamming=True,&amp;#10;    name='sound_1')&amp;#10;sound_1.setVolume(1.0)&amp;#10;lh.writeValue(9)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="import * as os from 'os';&amp;#10;var arr, my_path, sound_1;&amp;#10;my_path = &quot;C:/Users/carelab/Desktop/Erik/stimuli&quot;;&amp;#10;arr = os.listdir(my_path);&amp;#10;sound_1 = new sound.Sound(`C:/Users/carelab/Desktop/Erik/stimuli/${arr[1]}`, {&quot;secs&quot;: (- 1), &quot;stereo&quot;: true, &quot;hamming&quot;: true, &quot;name&quot;: &quot;sound_1&quot;});&amp;#10;sound_1.setVolume(1.0);&amp;#10;lh.writeValue(9);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((sound_1.status === NOT_STARTED)) {&amp;#10;    sound_1.play({&quot;when&quot;: psychoJS.window});&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="&amp;#10;if sound_1.status == NOT_STARTED:&amp;#10;    &amp;#10;    sound_1.play(when=win)" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="Music_start" valType="code" updates="None" name="name"/>
-      </CodeComponent>
       <CodeComponent name="force_finish_sb">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
@@ -556,23 +556,6 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="force_finish_sb" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <CodeComponent name="code_2triger">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="lh.writeValue(str.encode(&quot;7&quot;));&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="lh.writeValue(str.encode(&quot;7&quot;))" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code_2triger" valType="code" updates="None" name="name"/>
-      </CodeComponent>
     </Routine>
     <Routine name="end_sound">
       <CodeComponent name="Endmusic">
@@ -580,8 +563,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="sound_1.stop();&amp;#10;random_song = random.choice(arr);&amp;#10;sound_1 = new sound.Sound(`C:/Users/carelab/Desktop/Erik/stimuli/${arr[1]}`, {&quot;secs&quot;: (- 1), &quot;stereo&quot;: true, &quot;hamming&quot;: true, &quot;name&quot;: &quot;sound_1&quot;});&amp;#10;sound_1.setVolume(1.0);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="sound_1.stop()&amp;#10;random_song = random.choice(arr)&amp;#10;sound_1 = sound.Sound(f'C:/Users/carelab/Desktop/Erik/stimuli/{arr[1]}', secs=-1, stereo=True, hamming=True,&amp;#10;    name='sound_1')&amp;#10;sound_1.setVolume(1.0)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((cond === 0.1)) {&amp;#10;    sound_1.stop();&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="&amp;#10;if cond==0.1:&amp;#10;    sound_1.stop()&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -593,9 +576,55 @@
         <Param val="Endmusic" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
+    <Routine name="baseline">
+      <TextComponent name="text_7">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text_7" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="200" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="A" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_9">
+        <Param val="'y','n','left','right','space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_9" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="Welcome_message"/>
+    <Routine name="baseline"/>
     <Routine name="Instructions"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
@@ -616,7 +645,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="20" valType="num"/>
+      <Param name="nReps" updates="None" val="25" valType="num"/>
       <Param name="name" updates="None" val="distractor" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>

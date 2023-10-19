@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on October 18, 2023, at 19:27
+    on October 19, 2023, at 18:19
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -27,6 +27,23 @@ import sys  # to get file system encoding
 
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
+
+# Run 'Before Experiment' code from Port_set
+
+import numpy as np
+import serial
+import os
+from datetime import datetime
+# open serial port
+# revise the port here
+# port = serial.Serial('/dev/cu.usbserial-2120', 115200)
+portecg = serial.Serial('COM3', 115200)
+# port: the variable defined abolve
+# desc: the description of the event
+def event(port, desc, timestamp):
+#    win.callOnFlip(port.write, str.encode('1'))
+    thisExp.addData(desc, timestamp)
+
 
 # Run 'Before Experiment' code from porteeg
 import argparse
@@ -124,6 +141,16 @@ text = visual.TextStim(win=win, name='text',
     languageStyle='LTR',
     depth=0.0);
 
+# --- Initialize components for Routine "baseline" ---
+text_7 = visual.TextStim(win=win, name='text_7',
+    text='A',
+    font='Open Sans',
+    pos=(0, 0), height=0.0, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+key_resp_9 = keyboard.Keyboard()
+
 # --- Initialize components for Routine "Instructions" ---
 key_resp_4 = keyboard.Keyboard()
 text_instr = visual.TextStim(win=win, name='text_instr',
@@ -132,7 +159,7 @@ text_instr = visual.TextStim(win=win, name='text_instr',
     pos=(0, 0), height=0.04, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 
 # --- Initialize components for Routine "times_start" ---
 text_3 = visual.TextStim(win=win, name='text_3',
@@ -164,28 +191,28 @@ Stroop_response = keyboard.Keyboard()
 text_5 = visual.TextStim(win=win, name='text_5',
     text='',
     font='Arial',
-    pos=(0, 0.40), height=0.1, wrapWidth=None, ori=0.0, 
+    pos=(0, 0.40), height=1.0, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-2.0);
 stopb = visual.TextStim(win=win, name='stopb',
     text='',
     font='Arial',
-    pos=(0, -0.40), height=0.1, wrapWidth=None, ori=0.0, 
+    pos=(0, -0.40), height=1.0, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-3.0);
 stopl = visual.TextStim(win=win, name='stopl',
     text='',
     font='Arial',
-    pos=(-0.75, 0), height=0.1, wrapWidth=None, ori=90.0, 
+    pos=(-0.75, 0), height=1.0, wrapWidth=None, ori=90.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-4.0);
 stopr = visual.TextStim(win=win, name='stopr',
     text='',
     font='Arial',
-    pos=(0.75, 0), height=0.1, wrapWidth=None, ori=-90.0, 
+    pos=(0.75, 0), height=1.0, wrapWidth=None, ori=-90.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-5.0);
@@ -196,17 +223,6 @@ text_6 = visual.TextStim(win=win, name='text_6',
     color='white', colorSpace='rgb', opacity=0.0, 
     languageStyle='LTR',
     depth=-7.0);
-# Run 'Begin Experiment' code from Music_start
-import os 
-my_path="C:/Users/carelab/Desktop/Erik/stimuli"
-arr=os.listdir(my_path)
-
-sound_1 = sound.Sound(f"C:/Users/carelab/Desktop/Erik/stimuli/{arr[1]}", secs=-1, stereo=True, hamming=True,
-    name='sound_1')
-sound_1.setVolume(1.0)
-lh.writeValue(9)
-
-
 
 # --- Initialize components for Routine "end_sound" ---
 
@@ -297,6 +313,112 @@ if routineForceEnded:
     routineTimer.reset()
 else:
     routineTimer.addTime(-3.000000)
+
+# --- Prepare to start Routine "baseline" ---
+continueRoutine = True
+routineForceEnded = False
+# update component parameters for each repeat
+key_resp_9.keys = []
+key_resp_9.rt = []
+_key_resp_9_allKeys = []
+# keep track of which components have finished
+baselineComponents = [text_7, key_resp_9]
+for thisComponent in baselineComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+frameN = -1
+
+# --- Run Routine "baseline" ---
+while continueRoutine:
+    # get current time
+    t = routineTimer.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_7* updates
+    if text_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_7.frameNStart = frameN  # exact frame index
+        text_7.tStart = t  # local t and not account for scr refresh
+        text_7.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_7, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'text_7.started')
+        text_7.setAutoDraw(True)
+    if text_7.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_7.tStartRefresh + 200-frameTolerance:
+            # keep track of stop time/frame for later
+            text_7.tStop = t  # not accounting for scr refresh
+            text_7.frameNStop = frameN  # exact frame index
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'text_7.stopped')
+            text_7.setAutoDraw(False)
+    
+    # *key_resp_9* updates
+    waitOnFlip = False
+    if key_resp_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_resp_9.frameNStart = frameN  # exact frame index
+        key_resp_9.tStart = t  # local t and not account for scr refresh
+        key_resp_9.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_resp_9, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'key_resp_9.started')
+        key_resp_9.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(key_resp_9.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_9.status == STARTED and not waitOnFlip:
+        theseKeys = key_resp_9.getKeys(keyList=['y','n','left','right','space'], waitRelease=False)
+        _key_resp_9_allKeys.extend(theseKeys)
+        if len(_key_resp_9_allKeys):
+            key_resp_9.keys = _key_resp_9_allKeys[-1].name  # just the last key pressed
+            key_resp_9.rt = _key_resp_9_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        routineForceEnded = True
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in baselineComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# --- Ending Routine "baseline" ---
+for thisComponent in baselineComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if key_resp_9.keys in ['', [], None]:  # No response was made
+    key_resp_9.keys = None
+thisExp.addData('key_resp_9.keys',key_resp_9.keys)
+if key_resp_9.keys != None:  # we had a response
+    thisExp.addData('key_resp_9.rt', key_resp_9.rt)
+thisExp.nextEntry()
+# the Routine "baseline" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # --- Prepare to start Routine "Instructions" ---
 continueRoutine = True
@@ -431,8 +553,8 @@ for thisTrial in trials:
     key_resp.keys = []
     key_resp.rt = []
     _key_resp_allKeys = []
-    # Run 'Begin Routine' code from code
-    lh.writeValue(3)
+    # Run 'Begin Routine' code from triggeringeeg
+    lh.writeValue(2)
     # keep track of which components have finished
     times_startComponents = [text_3, text_2, key_resp, text_4]
     for thisComponent in times_startComponents:
@@ -540,13 +662,34 @@ for thisTrial in trials:
     trials.addData('key_resp.keys',key_resp.keys)
     if key_resp.keys != None:  # we had a response
         trials.addData('key_resp.rt', key_resp.rt)
-    # Run 'End Routine' code from code
-    lh.writeValue(4)
+    # Run 'End Routine' code from Trigger_triggering
+    portecg.write(str.encode("1"))
+    # Run 'End Routine' code from triggeringeeg
+    lh.writeValue(8)
+    # Run 'End Routine' code from music_starrt
+    
+    import os 
+    
+    my_path="C:/Users/carelab/Desktop/Erik/stimuli/sbject"
+    arr=os.listdir(my_path)
+    random_song = random.choice(arr)
+    sound_1 = sound.Sound(f'C:/Users/carelab/Desktop/Erik/stimuli/sbject/{random_song}', secs=-1, stereo=True, hamming=True,
+        name='sound_1')
+    
+    
+    if cond==0.1:
+        
+        sound_1.setVolume(1.0)
+    
+    if cond==0.1:
+        if sound_1.status == NOT_STARTED:
+            
+            sound_1.play(when=win)
     # the Routine "times_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    distractor = data.TrialHandler(nReps=20.0, method='random', 
+    distractor = data.TrialHandler(nReps=25.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('C:/Users/carelab/Desktop/Erik/resources/stroop.xlsx'),
         seed=None, name='distractor')
@@ -574,18 +717,15 @@ for thisTrial in trials:
         Stroop_response.keys = []
         Stroop_response.rt = []
         _Stroop_response_allKeys = []
+        text_5.setHeight(cond)
+        stopb.setHeight(cond)
+        stopl.setHeight(cond)
+        stopr.setHeight(cond)
         # Run 'Begin Routine' code from Reminders
         re=sorted([random.randint(0,120) for i in range(20)])
         text_6.setColor(color, colorSpace='rgb')
         text_6.setText(word)
         text_6.setHeight(cond)
-        # Run 'Begin Routine' code from Music_start
-        
-        if sound_1.status == NOT_STARTED:
-            
-            sound_1.play(when=win)
-        # Run 'Begin Routine' code from code_2triger
-        lh.writeValue(str.encode("7"))
         # keep track of which components have finished
         t_2Components = [key_resp_2, Stroop_response, text_5, stopb, stopl, stopr, text_6]
         for thisComponent in t_2Components:
@@ -851,7 +991,7 @@ for thisTrial in trials:
                 distractor.finished=1
         # the Routine "t_2" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
-    # completed 20.0 repeats of 'distractor'
+    # completed 25.0 repeats of 'distractor'
     
     
     # --- Prepare to start Routine "end_sound" ---
@@ -859,11 +999,10 @@ for thisTrial in trials:
     routineForceEnded = False
     # update component parameters for each repeat
     # Run 'Begin Routine' code from Endmusic
-    sound_1.stop()
-    random_song = random.choice(arr)
-    sound_1 = sound.Sound(f'C:/Users/carelab/Desktop/Erik/stimuli/{arr[1]}', secs=-1, stereo=True, hamming=True,
-        name='sound_1')
-    sound_1.setVolume(1.0)
+    
+    if cond==0.1:
+        sound_1.stop()
+    
     # keep track of which components have finished
     end_soundComponents = []
     for thisComponent in end_soundComponents:
@@ -990,6 +1129,12 @@ if routineForceEnded:
     routineTimer.reset()
 else:
     routineTimer.addTime(-3.000000)
+# Run 'End Experiment' code from Port_set
+portecg.close()
+
+# Run 'End Experiment' code from Trigger_triggering
+port.close()
+
 
 # --- End experiment ---
 # Flip one final time so any remaining win.callOnFlip() 
