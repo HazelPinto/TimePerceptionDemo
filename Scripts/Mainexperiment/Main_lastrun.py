@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on October 19, 2023, at 18:19
+    on October 25, 2023, at 15:53
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -27,41 +27,6 @@ import sys  # to get file system encoding
 
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
-
-# Run 'Before Experiment' code from Port_set
-
-import numpy as np
-import serial
-import os
-from datetime import datetime
-# open serial port
-# revise the port here
-# port = serial.Serial('/dev/cu.usbserial-2120', 115200)
-portecg = serial.Serial('COM3', 115200)
-# port: the variable defined abolve
-# desc: the description of the event
-def event(port, desc, timestamp):
-#    win.callOnFlip(port.write, str.encode('1'))
-    thisExp.addData(desc, timestamp)
-
-
-# Run 'Before Experiment' code from porteeg
-import argparse
-import serial
-import time
-
-class LabHackers:
-    def __init__(self, port1="COM4", rate=128000, timeout=0.01):
-        self.device = serial.Serial(
-            port=port1,
-            baudrate=rate,
-            timeout=timeout
-        )
-
-    def writeValue(self, value):
-        self.device.write(f"WRITE {value}\n".encode())
-
-lh = LabHackers() 
 
 # Run 'Before Experiment' code from Reminders
 import random
@@ -133,107 +98,221 @@ eyetracker = None
 defaultKeyboard = keyboard.Keyboard(backend='iohub')
 
 # --- Initialize components for Routine "Welcome_message" ---
-text = visual.TextStim(win=win, name='text',
-    text='Welcome !',
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
+textbox = visual.TextBox2(
+     win, text='Welcome!\nPlaese look at the following cross ', font='Open Sans',
+     pos=(0, 0),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='textbox',
+     autoLog=True,
+)
 
 # --- Initialize components for Routine "baseline" ---
-text_7 = visual.TextStim(win=win, name='text_7',
-    text='A',
-    font='Open Sans',
-    pos=(0, 0), height=0.0, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
 key_resp_9 = keyboard.Keyboard()
+textbox_2 = visual.TextBox2(
+     win, text='A', font='Open Sans',
+     pos=(0, 0),     letterHeight=0.0,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='textbox_2',
+     autoLog=True,
+)
+polygon = visual.ShapeStim(
+    win=win, name='polygon', vertices='cross',
+    size=(0.10, 0.10),
+    ori=0.0, pos=(0, 0), anchor='center',
+    lineWidth=0.6,     colorSpace='rgb',  lineColor='white', fillColor='white',
+    opacity=None, depth=-2.0, interpolate=True)
 
 # --- Initialize components for Routine "Instructions" ---
 key_resp_4 = keyboard.Keyboard()
-text_instr = visual.TextStim(win=win, name='text_instr',
-    text="For this experiment you are asked to press" + " \n bar space when you feel certain time has elapsed" + "\n The target time is gonna be shown in the screen and  " + " \n the time will start to run since the moment you press bar space as well" + "\n i addition to this, you`ll have to do a stroop task",
-    font='Comic Sans',
-    pos=(0, 0), height=0.04, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-2.0);
+textbox_3 = visual.TextBox2(
+     win, text="For this experiment you are asked to press" + "\n bar space when you feel certain time has elapsed" + "\n The target time is gonna be shown in the screen and  " + " \n the time will start to run since the moment you press bar space as well" + "\n i addition to this, you`ll have to do a stroop task", font='Open Sans',
+     pos=(0, 0),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='textbox_3',
+     autoLog=True,
+)
 
 # --- Initialize components for Routine "times_start" ---
-text_3 = visual.TextStim(win=win, name='text_3',
-    text='You`ll have to press space bar when you feel the next amount of seconds have elapsed :',
-    font='Open Sans',
-    pos=(0,0.3), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
-text_2 = visual.TextStim(win=win, name='text_2',
-    text='',
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-1.0);
 key_resp = keyboard.Keyboard()
-text_4 = visual.TextStim(win=win, name='text_4',
-    text='The time will start since the moment you \npress the space bar as well. In addition you are gonna start listenning music',
-    font='Open Sans',
-    pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-3.0);
+text_4 = visual.TextBox2(
+     win, text='The time will start since the moment you  press the space bar as well. In addition you are gonna start listenning music', font='Arial',
+     pos=(0, -0.2),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='text_4',
+     autoLog=True,
+)
+text_2 = visual.TextBox2(
+     win, text='', font='Arial',
+     pos=(0, 0),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='text_2',
+     autoLog=True,
+)
+text_3 = visual.TextBox2(
+     win, text='You`ll have to press space bar when you feel the next amount of seconds have elapsed :', font='Arial',
+     pos=(0, 0.2),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='text_3',
+     autoLog=True,
+)
 
 # --- Initialize components for Routine "t_2" ---
 key_resp_2 = keyboard.Keyboard()
 Stroop_response = keyboard.Keyboard()
-text_5 = visual.TextStim(win=win, name='text_5',
-    text='',
-    font='Arial',
-    pos=(0, 0.40), height=1.0, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-2.0);
-stopb = visual.TextStim(win=win, name='stopb',
-    text='',
-    font='Arial',
-    pos=(0, -0.40), height=1.0, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-3.0);
-stopl = visual.TextStim(win=win, name='stopl',
-    text='',
-    font='Arial',
-    pos=(-0.75, 0), height=1.0, wrapWidth=None, ori=90.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-4.0);
-stopr = visual.TextStim(win=win, name='stopr',
-    text='',
-    font='Arial',
-    pos=(0.75, 0), height=1.0, wrapWidth=None, ori=-90.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-5.0);
-text_6 = visual.TextStim(win=win, name='text_6',
-    text='',
-    font='Arial',
-    pos=(0, 0), height=1.0, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=0.0, 
-    languageStyle='LTR',
-    depth=-7.0);
+text_6 = visual.TextBox2(
+     win, text='', font='Open Sans',
+     pos=(0, 0),     letterHeight=0.13,
+     size=(None, None), borderWidth=0.0,
+     color='white', colorSpace='rgb',
+     opacity=0.0,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='text_6',
+     autoLog=True,
+)
+text_5 = visual.TextBox2(
+     win, text='', font='Open Sans',
+     pos=(0, 0.40),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='text_5',
+     autoLog=True,
+)
+stopb = visual.TextBox2(
+     win, text='', font='Arial',
+     pos=(0, -0.40),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='stopb',
+     autoLog=False,
+)
+stopl = visual.TextBox2(
+     win, text='', font='Open Sans',
+     pos=(-0.75, 0),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='stopl',
+     autoLog=True,
+)
+stopr = visual.TextBox2(
+     win, text='', font='Open Sans',
+     pos=(0.75, 0),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='stopr',
+     autoLog=True,
+)
 
 # --- Initialize components for Routine "end_sound" ---
 
 # --- Initialize components for Routine "Welcome_message" ---
-text = visual.TextStim(win=win, name='text',
-    text='Welcome !',
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
+textbox = visual.TextBox2(
+     win, text='Welcome!\nPlaese look at the following cross ', font='Open Sans',
+     pos=(0, 0),     letterHeight=0.05,
+     size=(None, None), borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='textbox',
+     autoLog=True,
+)
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -243,8 +322,9 @@ routineTimer = core.Clock()  # to track time remaining of each (possibly non-sli
 continueRoutine = True
 routineForceEnded = False
 # update component parameters for each repeat
+textbox.reset()
 # keep track of which components have finished
-Welcome_messageComponents = [text]
+Welcome_messageComponents = [textbox]
 for thisComponent in Welcome_messageComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -258,7 +338,7 @@ _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
 # --- Run Routine "Welcome_message" ---
-while continueRoutine and routineTimer.getTime() < 3.0:
+while continueRoutine and routineTimer.getTime() < 5.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -266,25 +346,25 @@ while continueRoutine and routineTimer.getTime() < 3.0:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *text* updates
-    if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *textbox* updates
+    if textbox.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text.frameNStart = frameN  # exact frame index
-        text.tStart = t  # local t and not account for scr refresh
-        text.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
+        textbox.frameNStart = frameN  # exact frame index
+        textbox.tStart = t  # local t and not account for scr refresh
+        textbox.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(textbox, 'tStartRefresh')  # time at next scr refresh
         # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'text.started')
-        text.setAutoDraw(True)
-    if text.status == STARTED:
+        thisExp.timestampOnFlip(win, 'textbox.started')
+        textbox.setAutoDraw(True)
+    if textbox.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text.tStartRefresh + 3.0-frameTolerance:
+        if tThisFlipGlobal > textbox.tStartRefresh + 5-frameTolerance:
             # keep track of stop time/frame for later
-            text.tStop = t  # not accounting for scr refresh
-            text.frameNStop = frameN  # exact frame index
+            textbox.tStop = t  # not accounting for scr refresh
+            textbox.frameNStop = frameN  # exact frame index
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text.stopped')
-            text.setAutoDraw(False)
+            thisExp.timestampOnFlip(win, 'textbox.stopped')
+            textbox.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -312,7 +392,7 @@ for thisComponent in Welcome_messageComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-3.000000)
+    routineTimer.addTime(-5.000000)
 
 # --- Prepare to start Routine "baseline" ---
 continueRoutine = True
@@ -321,8 +401,9 @@ routineForceEnded = False
 key_resp_9.keys = []
 key_resp_9.rt = []
 _key_resp_9_allKeys = []
+textbox_2.reset()
 # keep track of which components have finished
-baselineComponents = [text_7, key_resp_9]
+baselineComponents = [key_resp_9, textbox_2, polygon]
 for thisComponent in baselineComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -336,33 +417,13 @@ _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
 # --- Run Routine "baseline" ---
-while continueRoutine:
+while continueRoutine and routineTimer.getTime() < 180.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
-    
-    # *text_7* updates
-    if text_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        text_7.frameNStart = frameN  # exact frame index
-        text_7.tStart = t  # local t and not account for scr refresh
-        text_7.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(text_7, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'text_7.started')
-        text_7.setAutoDraw(True)
-    if text_7.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text_7.tStartRefresh + 200-frameTolerance:
-            # keep track of stop time/frame for later
-            text_7.tStop = t  # not accounting for scr refresh
-            text_7.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text_7.stopped')
-            text_7.setAutoDraw(False)
     
     # *key_resp_9* updates
     waitOnFlip = False
@@ -379,6 +440,15 @@ while continueRoutine:
         waitOnFlip = True
         win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
         win.callOnFlip(key_resp_9.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_9.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > key_resp_9.tStartRefresh + 180-frameTolerance:
+            # keep track of stop time/frame for later
+            key_resp_9.tStop = t  # not accounting for scr refresh
+            key_resp_9.frameNStop = frameN  # exact frame index
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'key_resp_9.stopped')
+            key_resp_9.status = FINISHED
     if key_resp_9.status == STARTED and not waitOnFlip:
         theseKeys = key_resp_9.getKeys(keyList=['y','n','left','right','space'], waitRelease=False)
         _key_resp_9_allKeys.extend(theseKeys)
@@ -387,6 +457,46 @@ while continueRoutine:
             key_resp_9.rt = _key_resp_9_allKeys[-1].rt
             # a response ends the routine
             continueRoutine = False
+    
+    # *textbox_2* updates
+    if textbox_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        textbox_2.frameNStart = frameN  # exact frame index
+        textbox_2.tStart = t  # local t and not account for scr refresh
+        textbox_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(textbox_2, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'textbox_2.started')
+        textbox_2.setAutoDraw(True)
+    if textbox_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > textbox_2.tStartRefresh + 180-frameTolerance:
+            # keep track of stop time/frame for later
+            textbox_2.tStop = t  # not accounting for scr refresh
+            textbox_2.frameNStop = frameN  # exact frame index
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'textbox_2.stopped')
+            textbox_2.setAutoDraw(False)
+    
+    # *polygon* updates
+    if polygon.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        polygon.frameNStart = frameN  # exact frame index
+        polygon.tStart = t  # local t and not account for scr refresh
+        polygon.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(polygon, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'polygon.started')
+        polygon.setAutoDraw(True)
+    if polygon.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > polygon.tStartRefresh + 180-frameTolerance:
+            # keep track of stop time/frame for later
+            polygon.tStop = t  # not accounting for scr refresh
+            polygon.frameNStop = frameN  # exact frame index
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'polygon.stopped')
+            polygon.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -417,8 +527,11 @@ thisExp.addData('key_resp_9.keys',key_resp_9.keys)
 if key_resp_9.keys != None:  # we had a response
     thisExp.addData('key_resp_9.rt', key_resp_9.rt)
 thisExp.nextEntry()
-# the Routine "baseline" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
+# using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+if routineForceEnded:
+    routineTimer.reset()
+else:
+    routineTimer.addTime(-180.000000)
 
 # --- Prepare to start Routine "Instructions" ---
 continueRoutine = True
@@ -427,8 +540,9 @@ routineForceEnded = False
 key_resp_4.keys = []
 key_resp_4.rt = []
 _key_resp_4_allKeys = []
+textbox_3.reset()
 # keep track of which components have finished
-InstructionsComponents = [key_resp_4, text_instr]
+InstructionsComponents = [key_resp_4, textbox_3]
 for thisComponent in InstructionsComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -474,25 +588,25 @@ while continueRoutine:
             # a response ends the routine
             continueRoutine = False
     
-    # *text_instr* updates
-    if text_instr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *textbox_3* updates
+    if textbox_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_instr.frameNStart = frameN  # exact frame index
-        text_instr.tStart = t  # local t and not account for scr refresh
-        text_instr.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(text_instr, 'tStartRefresh')  # time at next scr refresh
+        textbox_3.frameNStart = frameN  # exact frame index
+        textbox_3.tStart = t  # local t and not account for scr refresh
+        textbox_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(textbox_3, 'tStartRefresh')  # time at next scr refresh
         # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'text_instr.started')
-        text_instr.setAutoDraw(True)
-    if text_instr.status == STARTED:
+        thisExp.timestampOnFlip(win, 'textbox_3.started')
+        textbox_3.setAutoDraw(True)
+    if textbox_3.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text_instr.tStartRefresh + 19-frameTolerance:
+        if tThisFlipGlobal > textbox_3.tStartRefresh + 20-frameTolerance:
             # keep track of stop time/frame for later
-            text_instr.tStop = t  # not accounting for scr refresh
-            text_instr.frameNStop = frameN  # exact frame index
+            textbox_3.tStop = t  # not accounting for scr refresh
+            textbox_3.frameNStop = frameN  # exact frame index
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text_instr.stopped')
-            text_instr.setAutoDraw(False)
+            thisExp.timestampOnFlip(win, 'textbox_3.stopped')
+            textbox_3.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -527,7 +641,7 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=1.0, method='sequential', 
+trials = data.TrialHandler(nReps=3.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('C:/Users/carelab/Desktop/Erik/resources/p1.csv'),
     seed=None, name='trials')
@@ -549,14 +663,15 @@ for thisTrial in trials:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
-    text_2.setText(Value)
     key_resp.keys = []
     key_resp.rt = []
     _key_resp_allKeys = []
-    # Run 'Begin Routine' code from triggeringeeg
-    lh.writeValue(2)
+    text_4.reset()
+    text_2.reset()
+    text_2.setText(Value)
+    text_3.reset()
     # keep track of which components have finished
-    times_startComponents = [text_3, text_2, key_resp, text_4]
+    times_startComponents = [key_resp, text_4, text_2, text_3]
     for thisComponent in times_startComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -577,28 +692,6 @@ for thisTrial in trials:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *text_3* updates
-        if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            text_3.frameNStart = frameN  # exact frame index
-            text_3.tStart = t  # local t and not account for scr refresh
-            text_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text_3.started')
-            text_3.setAutoDraw(True)
-        
-        # *text_2* updates
-        if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            text_2.frameNStart = frameN  # exact frame index
-            text_2.tStart = t  # local t and not account for scr refresh
-            text_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text_2.started')
-            text_2.setAutoDraw(True)
         
         # *key_resp* updates
         waitOnFlip = False
@@ -634,6 +727,28 @@ for thisTrial in trials:
             thisExp.timestampOnFlip(win, 'text_4.started')
             text_4.setAutoDraw(True)
         
+        # *text_2* updates
+        if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_2.frameNStart = frameN  # exact frame index
+            text_2.tStart = t  # local t and not account for scr refresh
+            text_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'text_2.started')
+            text_2.setAutoDraw(True)
+        
+        # *text_3* updates
+        if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_3.frameNStart = frameN  # exact frame index
+            text_3.tStart = t  # local t and not account for scr refresh
+            text_3.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'text_3.started')
+            text_3.setAutoDraw(True)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -662,10 +777,6 @@ for thisTrial in trials:
     trials.addData('key_resp.keys',key_resp.keys)
     if key_resp.keys != None:  # we had a response
         trials.addData('key_resp.rt', key_resp.rt)
-    # Run 'End Routine' code from Trigger_triggering
-    portecg.write(str.encode("1"))
-    # Run 'End Routine' code from triggeringeeg
-    lh.writeValue(8)
     # Run 'End Routine' code from music_starrt
     
     import os 
@@ -717,17 +828,33 @@ for thisTrial in trials:
         Stroop_response.keys = []
         Stroop_response.rt = []
         _Stroop_response_allKeys = []
-        text_5.setHeight(cond)
-        stopb.setHeight(cond)
-        stopl.setHeight(cond)
-        stopr.setHeight(cond)
-        # Run 'Begin Routine' code from Reminders
-        re=sorted([random.randint(0,120) for i in range(20)])
+        text_6.reset()
         text_6.setColor(color, colorSpace='rgb')
         text_6.setText(word)
-        text_6.setHeight(cond)
+        text_5.reset()
+        text_5.setText(Value)
+        stopb.reset()
+        stopb.setText(Value)
+        stopl.reset()
+        stopl.setText(Value)
+        stopr.reset()
+        stopr.setText(Value)
+        # Run 'Begin Routine' code from Reminders
+        re=sorted([random.randint(0,120) for i in range(20)])
+        if cond==0.1:
+            text_6.setText(word)
+            text_5.setText(Value)
+            stopl.setText(Value)
+            stopr.setText(Value)
+            
+            
+        else:
+            text_6.setText("",log=False)
+            text_5.setText("",log=False)
+            stopl.setText("",log=False)
+            stopr.setText("",log=False)
         # keep track of which components have finished
-        t_2Components = [key_resp_2, Stroop_response, text_5, stopb, stopl, stopr, text_6]
+        t_2Components = [key_resp_2, Stroop_response, text_6, text_5, stopb, stopl, stopr]
         for thisComponent in t_2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -792,6 +919,17 @@ for thisTrial in trials:
                     # a response ends the routine
                     continueRoutine = False
             
+            # *text_6* updates
+            if text_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                text_6.frameNStart = frameN  # exact frame index
+                text_6.tStart = t  # local t and not account for scr refresh
+                text_6.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(text_6, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text_6.started')
+                text_6.setAutoDraw(True)
+            
             # *text_5* updates
             if text_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
@@ -802,8 +940,6 @@ for thisTrial in trials:
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'text_5.started')
                 text_5.setAutoDraw(True)
-            if text_5.status == STARTED:  # only update if drawing
-                text_5.setText(Value, log=False)
             
             # *stopb* updates
             if stopb.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -815,8 +951,6 @@ for thisTrial in trials:
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'stopb.started')
                 stopb.setAutoDraw(True)
-            if stopb.status == STARTED:  # only update if drawing
-                stopb.setText(Value, log=False)
             
             # *stopl* updates
             if stopl.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -828,8 +962,6 @@ for thisTrial in trials:
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'stopl.started')
                 stopl.setAutoDraw(True)
-            if stopl.status == STARTED:  # only update if drawing
-                stopl.setText(Value, log=False)
             
             # *stopr* updates
             if stopr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -841,8 +973,6 @@ for thisTrial in trials:
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'stopr.started')
                 stopr.setAutoDraw(True)
-            if stopr.status == STARTED:  # only update if drawing
-                stopr.setText(Value, log=False)
             # Run 'Each Frame' code from Reminders
             if (t>=re[0]) & (t<re[1]):
                 text_5.contrast =1
@@ -940,17 +1070,6 @@ for thisTrial in trials:
                 stopl.contrast =1
                 stopr.contrast =1
                 
-            
-            # *text_6* updates
-            if text_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                text_6.frameNStart = frameN  # exact frame index
-                text_6.tStart = t  # local t and not account for scr refresh
-                text_6.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(text_6, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'text_6.started')
-                text_6.setAutoDraw(True)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1052,15 +1171,16 @@ for thisTrial in trials:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1.0 repeats of 'trials'
+# completed 3.0 repeats of 'trials'
 
 
 # --- Prepare to start Routine "Welcome_message" ---
 continueRoutine = True
 routineForceEnded = False
 # update component parameters for each repeat
+textbox.reset()
 # keep track of which components have finished
-Welcome_messageComponents = [text]
+Welcome_messageComponents = [textbox]
 for thisComponent in Welcome_messageComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1074,7 +1194,7 @@ _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
 # --- Run Routine "Welcome_message" ---
-while continueRoutine and routineTimer.getTime() < 3.0:
+while continueRoutine and routineTimer.getTime() < 5.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1082,25 +1202,25 @@ while continueRoutine and routineTimer.getTime() < 3.0:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *text* updates
-    if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *textbox* updates
+    if textbox.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text.frameNStart = frameN  # exact frame index
-        text.tStart = t  # local t and not account for scr refresh
-        text.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
+        textbox.frameNStart = frameN  # exact frame index
+        textbox.tStart = t  # local t and not account for scr refresh
+        textbox.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(textbox, 'tStartRefresh')  # time at next scr refresh
         # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'text.started')
-        text.setAutoDraw(True)
-    if text.status == STARTED:
+        thisExp.timestampOnFlip(win, 'textbox.started')
+        textbox.setAutoDraw(True)
+    if textbox.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text.tStartRefresh + 3.0-frameTolerance:
+        if tThisFlipGlobal > textbox.tStartRefresh + 5-frameTolerance:
             # keep track of stop time/frame for later
-            text.tStop = t  # not accounting for scr refresh
-            text.frameNStop = frameN  # exact frame index
+            textbox.tStop = t  # not accounting for scr refresh
+            textbox.frameNStop = frameN  # exact frame index
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text.stopped')
-            text.setAutoDraw(False)
+            thisExp.timestampOnFlip(win, 'textbox.stopped')
+            textbox.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1128,13 +1248,7 @@ for thisComponent in Welcome_messageComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-3.000000)
-# Run 'End Experiment' code from Port_set
-portecg.close()
-
-# Run 'End Experiment' code from Trigger_triggering
-port.close()
-
+    routineTimer.addTime(-5.000000)
 
 # --- End experiment ---
 # Flip one final time so any remaining win.callOnFlip() 
