@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on October 25, 2023, at 15:53
+    on November 09, 2023, at 14:38
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -70,7 +70,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=(1024, 768), fullscr=True, screen=0, 
+    size=[2048, 1152], fullscr=True, screen=1, 
     winType='pyglet', allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
@@ -117,34 +117,18 @@ textbox = visual.TextBox2(
 
 # --- Initialize components for Routine "baseline" ---
 key_resp_9 = keyboard.Keyboard()
-textbox_2 = visual.TextBox2(
-     win, text='A', font='Open Sans',
-     pos=(0, 0),     letterHeight=0.0,
-     size=(None, None), borderWidth=2.0,
-     color='white', colorSpace='rgb',
-     opacity=None,
-     bold=False, italic=False,
-     lineSpacing=1.0,
-     padding=0.0, alignment='center',
-     anchor='center',
-     fillColor=None, borderColor=None,
-     flipHoriz=False, flipVert=False, languageStyle='LTR',
-     editable=False,
-     name='textbox_2',
-     autoLog=True,
-)
 polygon = visual.ShapeStim(
     win=win, name='polygon', vertices='cross',
     size=(0.10, 0.10),
     ori=0.0, pos=(0, 0), anchor='center',
     lineWidth=0.6,     colorSpace='rgb',  lineColor='white', fillColor='white',
-    opacity=None, depth=-2.0, interpolate=True)
+    opacity=None, depth=-1.0, interpolate=True)
 
 # --- Initialize components for Routine "Instructions" ---
 key_resp_4 = keyboard.Keyboard()
 textbox_3 = visual.TextBox2(
-     win, text="For this experiment you are asked to press" + "\n bar space when you feel certain time has elapsed" + "\n The target time is gonna be shown in the screen and  " + " \n the time will start to run since the moment you press bar space as well" + "\n i addition to this, you`ll have to do a stroop task", font='Open Sans',
-     pos=(0, 0),     letterHeight=0.05,
+     win, text="For this experiment you are asked to press" + "\n bar space when you feel certain time has elapsed" + "\n The target time is gonna be shown in the screen and  " + " \n the time will start to run since the moment you press bar space as well" + "\n i addition to this, you`ll have to do a stroop task if you start hearing music" , font='Open Sans',
+     pos=(0, 0),     letterHeight=0.03,
      size=(None, None), borderWidth=2.0,
      color='white', colorSpace='rgb',
      opacity=None,
@@ -214,7 +198,7 @@ text_3 = visual.TextBox2(
 key_resp_2 = keyboard.Keyboard()
 Stroop_response = keyboard.Keyboard()
 text_6 = visual.TextBox2(
-     win, text='', font='Open Sans',
+     win, text='', font='Arial',
      pos=(0, 0),     letterHeight=0.13,
      size=(None, None), borderWidth=0.0,
      color='white', colorSpace='rgb',
@@ -401,9 +385,8 @@ routineForceEnded = False
 key_resp_9.keys = []
 key_resp_9.rt = []
 _key_resp_9_allKeys = []
-textbox_2.reset()
 # keep track of which components have finished
-baselineComponents = [key_resp_9, textbox_2, polygon]
+baselineComponents = [key_resp_9, polygon]
 for thisComponent in baselineComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -457,26 +440,6 @@ while continueRoutine and routineTimer.getTime() < 180.0:
             key_resp_9.rt = _key_resp_9_allKeys[-1].rt
             # a response ends the routine
             continueRoutine = False
-    
-    # *textbox_2* updates
-    if textbox_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        textbox_2.frameNStart = frameN  # exact frame index
-        textbox_2.tStart = t  # local t and not account for scr refresh
-        textbox_2.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(textbox_2, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'textbox_2.started')
-        textbox_2.setAutoDraw(True)
-    if textbox_2.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > textbox_2.tStartRefresh + 180-frameTolerance:
-            # keep track of stop time/frame for later
-            textbox_2.tStop = t  # not accounting for scr refresh
-            textbox_2.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'textbox_2.stopped')
-            textbox_2.setAutoDraw(False)
     
     # *polygon* updates
     if polygon.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -641,7 +604,7 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=3.0, method='sequential', 
+trials = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('C:/Users/carelab/Desktop/Erik/resources/p1.csv'),
     seed=None, name='trials')
@@ -1171,7 +1134,7 @@ for thisTrial in trials:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 3.0 repeats of 'trials'
+# completed 1.0 repeats of 'trials'
 
 
 # --- Prepare to start Routine "Welcome_message" ---

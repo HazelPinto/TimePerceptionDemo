@@ -1,0 +1,367 @@
+13.7004 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [2560, 1440]. Using actual size
+16.6248 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000210AF911400>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000210B080A6D0>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([2560, 1440]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+16.6254 	EXP 	window1: mouseVisible = True
+16.6260 	EXP 	window1: mouseVisible = False
+16.6261 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+16.6263 	EXP 	window1: recordFrameIntervals = False
+16.7884 	EXP 	window1: recordFrameIntervals = True
+16.9728 	EXP 	Screen (0) actual frame rate measured at 59.95Hz
+16.9731 	EXP 	window1: recordFrameIntervals = False
+19.5962 	EXP 	Created polygon = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1, 1, 1]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=0.6, name='polygon', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+20.0821 	WARNING 	Font b'Songti SC' was requested. No similar font found.
+20.2355 	EXP 	textbox: autoLog = True
+20.2355 	EXP 	textbox_2: autoLog = True
+20.2355 	EXP 	textbox_3: autoLog = True
+20.2355 	EXP 	text_4: autoLog = True
+20.2355 	EXP 	text_2: autoLog = True
+20.2355 	EXP 	text_3: autoLog = True
+20.2355 	EXP 	text_6: autoLog = True
+20.2355 	EXP 	text_5: autoLog = True
+20.2355 	EXP 	stopl: autoLog = True
+20.2355 	EXP 	stopr: autoLog = True
+20.2355 	EXP 	textbox: autoLog = True
+20.2355 	EXP 	textbox: autoDraw = True
+25.2354 	EXP 	textbox: autoDraw = False
+25.2354 	EXP 	textbox: autoDraw = False
+25.2354 	EXP 	textbox_2: autoDraw = True
+25.2354 	EXP 	polygon: autoDraw = True
+26.8850 	DATA 	Keypress: space
+26.8893 	EXP 	textbox_2: autoDraw = False
+26.8893 	EXP 	polygon: autoDraw = False
+26.8893 	EXP 	textbox_3: autoDraw = True
+31.2714 	EXP 	Imported C:/Users/carelab/Desktop/Erik/resources/p1.csv as conditions, 32 conditions, 5 params
+31.2720 	EXP 	Created sequence: sequential, trialTypes=32, nReps=1, seed=None
+31.2723 	EXP 	New trial (rep=0, index=0): OrderedDict([('Psubj', 1), ('Attribute', 'est1'), ('Value', 105), ('cond', 0.0), ('Unique', None)])
+31.2993 	DATA 	Keypress: space
+31.3056 	EXP 	textbox_3: autoDraw = False
+31.3056 	EXP 	text_4: autoDraw = True
+31.3056 	EXP 	text_2: autoDraw = True
+31.3056 	EXP 	text_3: autoDraw = True
+38.2138 	EXP 	Imported C:/Users/carelab/Desktop/Erik/resources/stroop.xlsx as conditions, 72 conditions, 4 params
+38.2165 	EXP 	Created sequence: random, trialTypes=72, nReps=25, seed=None
+38.2170 	EXP 	New trial (rep=0, index=0): {'word': '黄色', 'color': 'yellow', 'correct': 'y', 'rand': 0.7491425462163189}
+38.3680 	DATA 	Keypress: space
+38.3765 	EXP 	text_4: autoDraw = False
+38.3765 	EXP 	text_2: autoDraw = False
+38.3765 	EXP 	text_3: autoDraw = False
+38.3765 	EXP 	text_6: foreColor = <psychopy.colors.Color: yellow, alpha=1.0>
+38.3765 	EXP 	text_6: autoDraw = True
+38.3765 	EXP 	text_5: autoDraw = True
+38.3765 	EXP 	stopl: autoDraw = True
+38.3765 	EXP 	stopr: autoDraw = True
+42.8970 	EXP 	New trial (rep=0, index=1): OrderedDict([('Psubj', 1), ('Attribute', 'est2'), ('Value', 30), ('cond', 0.1), ('Unique', None)])
+42.9193 	DATA 	Keypress: space
+42.9256 	EXP 	text_6: autoDraw = False
+42.9256 	EXP 	text_5: autoDraw = False
+42.9256 	EXP 	stopl: autoDraw = False
+42.9256 	EXP 	stopr: autoDraw = False
+42.9256 	EXP 	text_4: autoDraw = True
+42.9256 	EXP 	text_2: autoDraw = True
+42.9256 	EXP 	text_3: autoDraw = True
+43.9079 	EXP 	Sound sound_1 set volume 1.000
+43.9141 	EXP 	Sound sound_1 started
+43.9226 	EXP 	Imported C:/Users/carelab/Desktop/Erik/resources/stroop.xlsx as conditions, 72 conditions, 4 params
+43.9245 	EXP 	Created sequence: random, trialTypes=72, nReps=25, seed=None
+43.9249 	EXP 	New trial (rep=0, index=0): {'word': '蓝色', 'color': 'blue', 'correct': 'b', 'rand': 0.2885537618563081}
+43.9919 	DATA 	Keypress: space
+44.0012 	EXP 	text_4: autoDraw = False
+44.0012 	EXP 	text_2: autoDraw = False
+44.0012 	EXP 	text_3: autoDraw = False
+44.0012 	EXP 	text_6: foreColor = <psychopy.colors.Color: blue, alpha=1.0>
+44.0012 	EXP 	text_6: autoDraw = True
+44.0012 	EXP 	text_5: autoDraw = True
+44.0012 	EXP 	stopl: autoDraw = True
+44.0012 	EXP 	stopr: autoDraw = True
+45.1995 	DATA 	Keypress: r
+45.2080 	EXP 	New trial (rep=0, index=1): {'word': '黄色', 'color': 'green', 'correct': 'g', 'rand': 0.3242012646547854}
+45.2249 	EXP 	text_6: autoDraw = False
+45.2249 	EXP 	text_5: autoDraw = False
+45.2249 	EXP 	stopl: autoDraw = False
+45.2249 	EXP 	stopr: autoDraw = False
+45.2249 	EXP 	text_6: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+45.2249 	EXP 	text_6: autoDraw = True
+45.2249 	EXP 	text_5: autoDraw = True
+45.2249 	EXP 	stopl: autoDraw = True
+45.2249 	EXP 	stopr: autoDraw = True
+45.5881 	EXP 	New trial (rep=0, index=2): {'word': '绿色', 'color': 'blue', 'correct': 'b', 'rand': 0.4171596272839314}
+45.6572 	DATA 	Keypress: g
+45.6632 	EXP 	text_6: autoDraw = False
+45.6632 	EXP 	text_5: autoDraw = False
+45.6632 	EXP 	stopl: autoDraw = False
+45.6632 	EXP 	stopr: autoDraw = False
+45.6632 	EXP 	text_6: foreColor = <psychopy.colors.Color: blue, alpha=1.0>
+45.6632 	EXP 	text_6: autoDraw = True
+45.6632 	EXP 	text_5: autoDraw = True
+45.6632 	EXP 	stopl: autoDraw = True
+45.6632 	EXP 	stopr: autoDraw = True
+45.8369 	DATA 	Keypress: r
+45.8478 	EXP 	New trial (rep=0, index=3): {'word': '蓝色', 'color': 'blue', 'correct': 'b', 'rand': 0.24973015272354893}
+45.8698 	EXP 	text_6: autoDraw = False
+45.8698 	EXP 	text_5: autoDraw = False
+45.8698 	EXP 	stopl: autoDraw = False
+45.8698 	EXP 	stopr: autoDraw = False
+45.8698 	EXP 	text_6: foreColor = <psychopy.colors.Color: blue, alpha=1.0>
+45.8698 	EXP 	text_6: autoDraw = True
+45.8698 	EXP 	text_5: autoDraw = True
+45.8698 	EXP 	stopl: autoDraw = True
+45.8698 	EXP 	stopr: autoDraw = True
+46.0250 	DATA 	Keypress: g
+46.0318 	EXP 	New trial (rep=0, index=4): {'word': '绿色', 'color': 'red', 'correct': 'r', 'rand': 0.4032575548387137}
+46.0511 	EXP 	text_6: autoDraw = False
+46.0511 	EXP 	text_5: autoDraw = False
+46.0511 	EXP 	stopl: autoDraw = False
+46.0511 	EXP 	stopr: autoDraw = False
+46.0511 	EXP 	text_6: foreColor = <psychopy.colors.Color: red, alpha=1.0>
+46.0511 	EXP 	text_6: autoDraw = True
+46.0511 	EXP 	text_5: autoDraw = True
+46.0511 	EXP 	stopl: autoDraw = True
+46.0511 	EXP 	stopr: autoDraw = True
+46.2301 	DATA 	Keypress: r
+46.2382 	EXP 	New trial (rep=0, index=5): {'word': '黄色', 'color': 'yellow', 'correct': 'y', 'rand': 0.7491425462163189}
+46.2609 	EXP 	text_6: autoDraw = False
+46.2609 	EXP 	text_5: autoDraw = False
+46.2609 	EXP 	stopl: autoDraw = False
+46.2609 	EXP 	stopr: autoDraw = False
+46.2609 	EXP 	text_6: foreColor = <psychopy.colors.Color: yellow, alpha=1.0>
+46.2609 	EXP 	text_6: autoDraw = True
+46.2609 	EXP 	text_5: autoDraw = True
+46.2609 	EXP 	stopl: autoDraw = True
+46.2609 	EXP 	stopr: autoDraw = True
+46.5667 	DATA 	Keypress: g
+46.5752 	EXP 	New trial (rep=0, index=6): {'word': '蓝色', 'color': 'red', 'correct': 'r', 'rand': 0.44147776401782257}
+46.6054 	EXP 	text_6: autoDraw = False
+46.6054 	EXP 	text_5: autoDraw = False
+46.6054 	EXP 	stopl: autoDraw = False
+46.6054 	EXP 	stopr: autoDraw = False
+46.6054 	EXP 	text_6: foreColor = <psychopy.colors.Color: red, alpha=1.0>
+46.6054 	EXP 	text_6: autoDraw = True
+46.6054 	EXP 	text_5: autoDraw = True
+46.6054 	EXP 	stopl: autoDraw = True
+46.6054 	EXP 	stopr: autoDraw = True
+46.7878 	DATA 	Keypress: r
+46.7991 	EXP 	New trial (rep=0, index=7): {'word': '黄色', 'color': 'red', 'correct': 'r', 'rand': 0.4795415117637233}
+46.8192 	EXP 	text_6: autoDraw = False
+46.8192 	EXP 	text_5: autoDraw = False
+46.8192 	EXP 	stopl: autoDraw = False
+46.8192 	EXP 	stopr: autoDraw = False
+46.8192 	EXP 	text_6: foreColor = <psychopy.colors.Color: red, alpha=1.0>
+46.8192 	EXP 	text_6: autoDraw = True
+46.8192 	EXP 	text_5: autoDraw = True
+46.8192 	EXP 	stopl: autoDraw = True
+46.8192 	EXP 	stopr: autoDraw = True
+47.3805 	EXP 	Sound sound_1 stopped
+47.3827 	EXP 	New trial (rep=0, index=2): OrderedDict([('Psubj', 1), ('Attribute', 'est3'), ('Value', 120), ('cond', 0.1), ('Unique', None)])
+47.4147 	DATA 	Keypress: space
+47.4210 	EXP 	text_6: autoDraw = False
+47.4210 	EXP 	text_5: autoDraw = False
+47.4210 	EXP 	stopl: autoDraw = False
+47.4210 	EXP 	stopr: autoDraw = False
+47.4210 	EXP 	text_4: autoDraw = True
+47.4210 	EXP 	text_2: autoDraw = True
+47.4210 	EXP 	text_3: autoDraw = True
+47.9217 	DATA 	Keypress: space
+48.1320 	EXP 	Sound sound_1 set volume 1.000
+48.1459 	EXP 	Sound sound_1 started
+48.1497 	EXP 	Imported C:/Users/carelab/Desktop/Erik/resources/stroop.xlsx as conditions, 72 conditions, 4 params
+48.1511 	EXP 	Created sequence: random, trialTypes=72, nReps=25, seed=None
+48.1518 	EXP 	New trial (rep=0, index=0): {'word': '绿色', 'color': 'green', 'correct': 'g', 'rand': 0.6797198990991277}
+48.1807 	EXP 	text_4: autoDraw = False
+48.1807 	EXP 	text_2: autoDraw = False
+48.1807 	EXP 	text_3: autoDraw = False
+48.1807 	EXP 	text_6: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+48.1807 	EXP 	text_6: autoDraw = True
+48.1807 	EXP 	text_5: autoDraw = True
+48.1807 	EXP 	stopl: autoDraw = True
+48.1807 	EXP 	stopr: autoDraw = True
+61.9598 	DATA 	Keypress: r
+61.9700 	EXP 	New trial (rep=0, index=1): {'word': '黄色', 'color': 'green', 'correct': 'g', 'rand': 0.2074999294594546}
+61.9987 	EXP 	text_6: autoDraw = False
+61.9987 	EXP 	text_5: autoDraw = False
+61.9987 	EXP 	stopl: autoDraw = False
+61.9987 	EXP 	stopr: autoDraw = False
+61.9987 	EXP 	text_6: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+61.9987 	EXP 	text_6: autoDraw = True
+61.9987 	EXP 	text_5: autoDraw = True
+61.9987 	EXP 	stopl: autoDraw = True
+61.9987 	EXP 	stopr: autoDraw = True
+62.3115 	DATA 	Keypress: g
+62.3197 	EXP 	New trial (rep=0, index=2): {'word': '蓝色', 'color': 'blue', 'correct': 'b', 'rand': 0.8871805183874621}
+62.3453 	EXP 	text_6: autoDraw = False
+62.3453 	EXP 	text_5: autoDraw = False
+62.3453 	EXP 	stopl: autoDraw = False
+62.3453 	EXP 	stopr: autoDraw = False
+62.3453 	EXP 	text_6: foreColor = <psychopy.colors.Color: blue, alpha=1.0>
+62.3453 	EXP 	text_6: autoDraw = True
+62.3453 	EXP 	text_5: autoDraw = True
+62.3453 	EXP 	stopl: autoDraw = True
+62.3453 	EXP 	stopr: autoDraw = True
+62.6184 	EXP 	New trial (rep=0, index=3): {'word': '蓝色', 'color': 'green', 'correct': 'g', 'rand': 0.3853899744639402}
+62.6332 	DATA 	Keypress: r
+62.6378 	EXP 	text_6: autoDraw = False
+62.6378 	EXP 	text_5: autoDraw = False
+62.6378 	EXP 	stopl: autoDraw = False
+62.6378 	EXP 	stopr: autoDraw = False
+62.6378 	EXP 	text_6: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+62.6378 	EXP 	text_6: autoDraw = True
+62.6378 	EXP 	text_5: autoDraw = True
+62.6378 	EXP 	stopl: autoDraw = True
+62.6378 	EXP 	stopr: autoDraw = True
+62.9697 	EXP 	New trial (rep=0, index=4): {'word': '黄色', 'color': 'red', 'correct': 'r', 'rand': 0.9897552790770935}
+62.9953 	DATA 	Keypress: g
+62.9996 	EXP 	text_6: autoDraw = False
+62.9996 	EXP 	text_5: autoDraw = False
+62.9996 	EXP 	stopl: autoDraw = False
+62.9996 	EXP 	stopr: autoDraw = False
+62.9996 	EXP 	text_6: foreColor = <psychopy.colors.Color: red, alpha=1.0>
+62.9996 	EXP 	text_6: autoDraw = True
+62.9996 	EXP 	text_5: autoDraw = True
+62.9996 	EXP 	stopl: autoDraw = True
+62.9996 	EXP 	stopr: autoDraw = True
+63.6175 	DATA 	Keypress: r
+63.6246 	EXP 	New trial (rep=0, index=5): {'word': '蓝色', 'color': 'red', 'correct': 'r', 'rand': 0.13826034453314595}
+63.6452 	EXP 	text_6: autoDraw = False
+63.6452 	EXP 	text_5: autoDraw = False
+63.6452 	EXP 	stopl: autoDraw = False
+63.6452 	EXP 	stopr: autoDraw = False
+63.6452 	EXP 	text_6: foreColor = <psychopy.colors.Color: red, alpha=1.0>
+63.6452 	EXP 	text_6: autoDraw = True
+63.6452 	EXP 	text_5: autoDraw = True
+63.6452 	EXP 	stopl: autoDraw = True
+63.6452 	EXP 	stopr: autoDraw = True
+64.1659 	DATA 	Keypress: g
+64.1754 	EXP 	New trial (rep=0, index=6): {'word': '黄色', 'color': 'yellow', 'correct': 'y', 'rand': 0.7491425462163189}
+64.1930 	EXP 	text_6: autoDraw = False
+64.1930 	EXP 	text_5: autoDraw = False
+64.1930 	EXP 	stopl: autoDraw = False
+64.1930 	EXP 	stopr: autoDraw = False
+64.1930 	EXP 	text_6: foreColor = <psychopy.colors.Color: yellow, alpha=1.0>
+64.1930 	EXP 	text_6: autoDraw = True
+64.1930 	EXP 	text_5: autoDraw = True
+64.1930 	EXP 	stopl: autoDraw = True
+64.1930 	EXP 	stopr: autoDraw = True
+64.8844 	EXP 	New trial (rep=0, index=7): {'word': '蓝色', 'color': 'red', 'correct': 'r', 'rand': 0.37084114989276096}
+64.9109 	DATA 	Keypress: y
+64.9159 	EXP 	text_6: autoDraw = False
+64.9159 	EXP 	text_5: autoDraw = False
+64.9159 	EXP 	stopl: autoDraw = False
+64.9159 	EXP 	stopr: autoDraw = False
+64.9159 	EXP 	text_6: foreColor = <psychopy.colors.Color: red, alpha=1.0>
+64.9159 	EXP 	text_6: autoDraw = True
+64.9159 	EXP 	text_5: autoDraw = True
+64.9159 	EXP 	stopl: autoDraw = True
+64.9159 	EXP 	stopr: autoDraw = True
+65.4244 	DATA 	Keypress: space
+65.4478 	EXP 	Sound sound_1 stopped
+65.4493 	EXP 	New trial (rep=0, index=3): OrderedDict([('Psubj', 1), ('Attribute', 'est4'), ('Value', 30), ('cond', 0.1), ('Unique', None)])
+65.4727 	EXP 	text_6: autoDraw = False
+65.4727 	EXP 	text_5: autoDraw = False
+65.4727 	EXP 	stopl: autoDraw = False
+65.4727 	EXP 	stopr: autoDraw = False
+65.4727 	EXP 	text_4: autoDraw = True
+65.4727 	EXP 	text_2: autoDraw = True
+65.4727 	EXP 	text_3: autoDraw = True
+65.9140 	DATA 	Keypress: space
+66.1151 	EXP 	Sound sound_1 set volume 1.000
+66.1238 	EXP 	Sound sound_1 started
+66.1389 	EXP 	Imported C:/Users/carelab/Desktop/Erik/resources/stroop.xlsx as conditions, 72 conditions, 4 params
+66.1407 	EXP 	Created sequence: random, trialTypes=72, nReps=25, seed=None
+66.1410 	EXP 	New trial (rep=0, index=0): {'word': '红色', 'color': 'green', 'correct': 'g', 'rand': 0.38099004569766526}
+66.2087 	EXP 	text_4: autoDraw = False
+66.2087 	EXP 	text_2: autoDraw = False
+66.2087 	EXP 	text_3: autoDraw = False
+66.2087 	EXP 	text_6: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+66.2087 	EXP 	text_6: autoDraw = True
+66.2087 	EXP 	text_5: autoDraw = True
+66.2087 	EXP 	stopl: autoDraw = True
+66.2087 	EXP 	stopr: autoDraw = True
+67.2190 	EXP 	New trial (rep=0, index=1): {'word': '蓝色', 'color': 'yellow', 'correct': 'y', 'rand': 0.5319042909686653}
+67.2325 	DATA 	Keypress: y
+67.2372 	EXP 	text_6: autoDraw = False
+67.2372 	EXP 	text_5: autoDraw = False
+67.2372 	EXP 	stopl: autoDraw = False
+67.2372 	EXP 	stopr: autoDraw = False
+67.2372 	EXP 	text_6: foreColor = <psychopy.colors.Color: yellow, alpha=1.0>
+67.2372 	EXP 	text_6: autoDraw = True
+67.2372 	EXP 	text_5: autoDraw = True
+67.2372 	EXP 	stopl: autoDraw = True
+67.2372 	EXP 	stopr: autoDraw = True
+67.5091 	EXP 	New trial (rep=0, index=2): {'word': '绿色', 'color': 'green', 'correct': 'g', 'rand': 0.02447086180725}
+67.5355 	DATA 	Keypress: g
+67.5401 	EXP 	text_6: autoDraw = False
+67.5401 	EXP 	text_5: autoDraw = False
+67.5401 	EXP 	stopl: autoDraw = False
+67.5401 	EXP 	stopr: autoDraw = False
+67.5401 	EXP 	text_6: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+67.5401 	EXP 	text_6: autoDraw = True
+67.5401 	EXP 	text_5: autoDraw = True
+67.5401 	EXP 	stopl: autoDraw = True
+67.5401 	EXP 	stopr: autoDraw = True
+67.8591 	DATA 	Keypress: y
+67.8675 	EXP 	New trial (rep=0, index=3): {'word': '黄色', 'color': 'red', 'correct': 'r', 'rand': 0.6910314918053754}
+67.8966 	EXP 	text_6: autoDraw = False
+67.8966 	EXP 	text_5: autoDraw = False
+67.8966 	EXP 	stopl: autoDraw = False
+67.8966 	EXP 	stopr: autoDraw = False
+67.8966 	EXP 	text_6: foreColor = <psychopy.colors.Color: red, alpha=1.0>
+67.8966 	EXP 	text_6: autoDraw = True
+67.8966 	EXP 	text_5: autoDraw = True
+67.8966 	EXP 	stopl: autoDraw = True
+67.8966 	EXP 	stopr: autoDraw = True
+68.0925 	EXP 	New trial (rep=0, index=4): {'word': '黄色', 'color': 'green', 'correct': 'g', 'rand': 0.09931967422415955}
+68.1124 	DATA 	Keypress: g
+68.1172 	EXP 	text_6: autoDraw = False
+68.1172 	EXP 	text_5: autoDraw = False
+68.1172 	EXP 	stopl: autoDraw = False
+68.1172 	EXP 	stopr: autoDraw = False
+68.1172 	EXP 	text_6: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+68.1172 	EXP 	text_6: autoDraw = True
+68.1172 	EXP 	text_5: autoDraw = True
+68.1172 	EXP 	stopl: autoDraw = True
+68.1172 	EXP 	stopr: autoDraw = True
+68.4040 	DATA 	Keypress: space
+68.4332 	EXP 	Sound sound_1 stopped
+68.4346 	EXP 	New trial (rep=0, index=4): OrderedDict([('Psubj', 1), ('Attribute', 'est5'), ('Value', 105), ('cond', 0.0), ('Unique', None)])
+68.4629 	EXP 	text_6: autoDraw = False
+68.4629 	EXP 	text_5: autoDraw = False
+68.4629 	EXP 	stopl: autoDraw = False
+68.4629 	EXP 	stopr: autoDraw = False
+68.4629 	EXP 	text_4: autoDraw = True
+68.4629 	EXP 	text_2: autoDraw = True
+68.4629 	EXP 	text_3: autoDraw = True
+69.2695 	EXP 	Imported C:/Users/carelab/Desktop/Erik/resources/stroop.xlsx as conditions, 72 conditions, 4 params
+69.2711 	EXP 	Created sequence: random, trialTypes=72, nReps=25, seed=None
+69.2714 	EXP 	New trial (rep=0, index=0): {'word': '黄色', 'color': 'blue', 'correct': 'b', 'rand': 0.3819301078379551}
+69.2839 	DATA 	Keypress: space
+69.2883 	EXP 	text_4: autoDraw = False
+69.2883 	EXP 	text_2: autoDraw = False
+69.2883 	EXP 	text_3: autoDraw = False
+69.2883 	EXP 	text_6: foreColor = <psychopy.colors.Color: blue, alpha=1.0>
+69.2883 	EXP 	text_6: autoDraw = True
+69.2883 	EXP 	text_5: autoDraw = True
+69.2883 	EXP 	stopl: autoDraw = True
+69.2883 	EXP 	stopr: autoDraw = True
+69.7119 	DATA 	Keypress: space
+69.7208 	EXP 	New trial (rep=0, index=5): OrderedDict([('Psubj', 1), ('Attribute', 'est6'), ('Value', 120), ('cond', 0.1), ('Unique', None)])
+69.7345 	EXP 	text_6: autoDraw = False
+69.7345 	EXP 	text_5: autoDraw = False
+69.7345 	EXP 	stopl: autoDraw = False
+69.7345 	EXP 	stopr: autoDraw = False
+69.7345 	EXP 	text_4: autoDraw = True
+69.7345 	EXP 	text_2: autoDraw = True
+69.7345 	EXP 	text_3: autoDraw = True
+70.2302 	EXP 	Sound sound_1 set volume 1.000
+70.2388 	EXP 	Sound sound_1 started
+70.2519 	EXP 	Imported C:/Users/carelab/Desktop/Erik/resources/stroop.xlsx as conditions, 72 conditions, 4 params
+70.2537 	EXP 	Created sequence: random, trialTypes=72, nReps=25, seed=None
+70.2541 	EXP 	New trial (rep=0, index=0): {'word': '黄色', 'color': 'blue', 'correct': 'b', 'rand': 0.46742103737559004}
+70.2680 	DATA 	Keypress: space
+70.2731 	EXP 	text_4: autoDraw = False
+70.2731 	EXP 	text_2: autoDraw = False
+70.2731 	EXP 	text_3: autoDraw = False
+70.2731 	EXP 	text_6: foreColor = <psychopy.colors.Color: blue, alpha=1.0>
+70.2731 	EXP 	text_6: autoDraw = True
+70.2731 	EXP 	text_5: autoDraw = True
+70.2731 	EXP 	stopl: autoDraw = True
+70.2731 	EXP 	stopr: autoDraw = True
+71.2269 	DATA 	Keypress: escape
+73.4530 	EXP 	window1: mouseVisible = True
